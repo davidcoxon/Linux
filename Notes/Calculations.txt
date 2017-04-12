@@ -1,0 +1,20 @@
+You can perform simple maths within linux script using something like
+
+echo $(( 10 + 10 ))
+
+the numbers can be replaced with variables like this
+
+number1=10
+
+- you can test that with echo $number1
+
+number2=20
+
+- sets the second variable
+ 
+number3=$(($number2 + $number2))
+
+- creates the answer as variable $number3 which can be tested with 
+
+echo $number3
+

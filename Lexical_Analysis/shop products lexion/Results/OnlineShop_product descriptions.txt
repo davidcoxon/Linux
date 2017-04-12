@@ -1,0 +1,218 @@
+Text Analysis: Baltic Online-shop
+short product description versus Full description
+Ran on : 15th December 2012 
+
+*****************************************************
+                       Group 1
+*****************************************************
+
+Document count
+       1
+
+Total word count
+    5064
+
+Unique word count
+    1009
+
+Interesting word count
+     723
+
+Words unique to Group
+     643
+
+about, accompany, acrylic, active, add, adornment, affirming, after, airtight, alarm, allows, alongside, also, always, america, american, amount, angeles, animator, ant, anthony, antony, any, appealing, appears, appetit, aritst, arrives, articles, artists, arts, assembled, atmosphere, attached, authenticity, autumn, available, award, baby, back, balancing, band, base, battle, beautifully, beauty, because, bedside, been, benefit, biggest, binchotan, birds, birthday, blends, bold, bonham, bookends, books, both, boyce, bracewell, bradley, branded, breaking, breath, brew, brilliant, brings, brought, builders, burgermans, bus, button, buy, california, candesign, candleabra, candles, captured, capturing, cardboard, carrying, cartoon, celebrate, certificate, chain, charcoal, chart, chiho, childhood, chlorine, christmas, chrome, chromed, clever, clock, cm, coast, coated, coating, coincided, collaboration, collective, collectors, colourway, come, comic, commissioned, complete, comprehensive, concerns, considered, construction, container, continuous, contrasting, cork, could, coventry, cover, created, creation, crescendo, crests, cuff, cufflinks, culture, currently, daffodil, dance, dark, day, deargateshead, dearnewcastle, decanter, decorate, delivered, depicts, designershave, desired, detrius, diameter, didn, dining, dish, dishwasher, displays, distance, distinctive, door, doorstop, dozen, drawings, drinking, during, each, easy, eau, echoes, edge, editions, eggs, embroidered, emission, erection, essay, essential, estate, ever, every, everyday, everyone, excellent, exciting, exclusively, exhhibitor, exhibited, exhibitionat, exposure, expressive, eyebrows, eyes, face, fairy, fallen, familiar, fantastic, faux, favourite, feather, feel, few, fibre, fiction, films, fine, first, fits, five, fixed, flare, flat, flowing, focus, folk, foot, forests, forgetful, fork, founding, fourteen, franklin, free, french, friends, full, funky, gamble, garden, gardener, generation, geometry, geordie, germany, giant, give, gives, glassbottle, gloss, glow, glue, go, gormley, graduated, green, greet, grey, ground, group, grover, gsm, h, half, handcrafted, handle, handy, haunting, he, height, helens, her, here, highlight, highly, hilary, hill, him, hints, history, hobbs, hold, holding, holds, hole, holes, homeand, homeware, house, hundred, if, illustrated, imaginations, immediately, impart, important, impressive, improved, included, includes, including, individual, influence, influential, inks, inner, inspred, institute, interlinked, internationally, intothe, italy, itself, jarema, john, jonathan, kaikai, karla, keith, kelley, key, kiki, king, kitchen, kozyndanthis, label, lake, landscape, large, larks, last, late, launched, lens, less, lid, like, likes, linocuts, liquid, litho, lithograph, ll, lloyd, llustrated, locally, locks, lolly, los, lovely, luchtime, lush, m, magazine, magnetic, major, makers, making, manufactured, mark, martin, material, matt, matter, mdf, measure, measures, measuring, medium, members, memo, metalic, michael, microwave, microwaving, mike, milky, miller, mineralising, mini, minimalism, mirrored, mixed, ml, mm, modern, moderns, moon, mountain, mountst, mouth, movement, much, mugl, munky, mural, myth, named, nd, need, neon, neverland, nina, no, non, noodles, northumbria, notes, novelist, november, number, objects, offset, often, online, opened, orange, order, ordinary, originally, others, oursler, outdoor, outfit, overview, packed, page, pages, panoramic, paperback, papercut, part, payne, peculiar, pencil, pencils, pennies, pens, people, person, peter, pewter, ph, photographs, picnic, piece, pieces, pink, placed, plain, planet, play, playful, playtime, plenty, plush, pop, popular, portable, potsgive, pp, previously, printed, printing, processing, produce, product, prolific, proudly, provide, purifies, quick, quirky, r, rack, radical, re, reading, ready, real, record, recurrent, recycled, red, reducing, remade, reproductions, residence, retro, reverse, reviews, rim, river, robryan, robust, room, routemaster, rubber, rusty, sadly, safe, salad, same, satin, sauce, saucer, save, scale, scandinavian, scene, school, sculptural, sea, seal, seas, seconds, see, seen, selab, separate, seperates, seven, several, shade, shiny, shipped, side, signature, silicon, silver, simply, single, singley, singly, sinister, sit, sixties, size, slot, sly, small, smooth, snugly, sold, solography, solution, somerset, specially, speckled, spirit, spoon, spout, spy, srap, st, stainless, stamp, standard, stands, star, stately, steel, stell, stick, stock, stoke, storage, store, subject, substainable, suede, super, superflat, supplied, support, sure, survey, sushi, sweet, sweeten, symbols, table, talian, tall, teas, teatime, techniques, text, texture, th, than, them, then, they, think, through, throughout, tight, tile, times, title, together, tony, tools, toxic, transparent, treat, trees, trent, trip, tube, tumbling, turns, twenty, twist, tyne, tyneside, typically, ukraine, ukranian, unique, university, unseen, uprisings, uses, using, valve, varnishing, vary, ve, vermillion, versions, videos, villages, visual, w, war, waterbased, watercolours, ways, we, welcoming, welivehere, were, west, what, while, whopping, whose, why, wilkinson, windows, wingspan, within, won, wood, words, work, world, worth, x, years, yellow, 
+
+Words density
+
+ 202 the
+ 172 and
+ 166 a
+ 154 of
+  99 cm
+  96 in
+  74 this
+  74 by
+  70 is
+  67 s
+  67 it
+  59 to
+  59 baltic
+  55 with
+  52 for
+  50 x
+  48 from
+  40 edition
+  36 on
+  35 artist
+  34 print
+  32 your
+  25 high
+  24 limited
+  23 made
+  22 design
+  21 signed
+  21 has
+  21 box
+  21 at
+  21 are
+  20 gift
+  20 an
+  19 have
+  18 style
+  18 size
+  18 designer
+  18 also
+  17 these
+  17 stands
+  17 shaw
+  17 prints
+  17 one
+  17 numbered
+  17 designers
+  17 any
+  16 which
+  16 part
+  16 black
+  16 available
+
+
+*****************************************************
+                       Group 2
+*****************************************************
+
+Document count
+       1
+
+Total word count
+    2047
+
+Unique word count
+     561
+
+Interesting word count
+     385
+
+Words unique to group
+     195
+
+accessories, accompaning, adds, affordable, afternoons, alarming, alone, angelic, animal, anzeri, architectural, aspiring, b, beatles, best, big, bird, birdhouses, blossom, bookshelf, boy, brazilian, bridge, british, brucie, budding, burgerman, byker, calogue, campfire, camping, candelabra, capture, carafe, carmen, carries, catching, chic, chinho, cling, constructed, control, creative, cut, decant, deer, difference, digital, discerning, donkey, down, drinker, drummer, dry, duchess, duo, eames, eat, eco, edtion, elegant, exhibitors, eye, favourites, female, festival, fierce, find, fingerprint, fluffy, fly, food, fountain, frida, friendly, fro, fur, glamping, golden, grove, hang, having, head, heads, healthy, hello, hers, hillier, indoors, innovative, inspiration, inspiring, interlink, irresistable, jars, keeps, keys, kids, landmark, landmarks, let, lollipop, looking, looks, loved, lovers, loving, man, maurizio, may, mealtimes, memos, mess, might, millenium, millennium, miss, moominmama, moomipapa, moonmins, murai, my, n, names, naturally, neck, needs, obsessed, occupied, old, ones, over, patterned, penny, pick, pin, playhouse, posters, press, priscilla, purifes, rainy, reads, recall, recommended, reliable, relive, remember, rendition, renowned, revolutionise, ring, rocks, sage, said, selected, sharpen, show, sign, silkscreen, sitting, six, skull, sleeve, snufkin, sprung, starting, straight, strain, street, suited, surprise, swallow, tail, takeaway, teapot, thought, time, tokyo, towel, tower, transformed, valley, van, version, visit, viva, wants, way, welcome, whimsical, wine, wonder, xmas, year, 
+
+Words density
+
+  94 the
+  56 of
+  54 a
+  44 this
+  41 baltic
+  37 for
+  33 with
+  31 s
+  31 design
+  31 by
+  25 to
+  25 print
+  25 edition
+  23 limited
+  22 in
+  18 from
+  18 and
+  17 on
+  15 north
+  15 is
+  14 your
+  14 exclusive
+  12 that
+  12 kozyndan
+  12 bunny
+  11 style
+  11 or
+  11 exhibition
+  11 contemporary
+  11 can
+  10 take
+  10 shaw
+  10 seletti
+  10 designers
+  10 artist
+   9 their
+   9 tableware
+   9 range
+   9 mug
+   9 japanese
+   9 hanna
+   9 desirable
+   9 danish
+   9 combines
+   9 children
+   9 blomst
+   9 angel
+   9 an
+   8 water
+   8 time
+
+
+*****************************************************
+                    Groups 1 and 2
+*****************************************************
+
+
+Words used by both groups 
+     366
+
+a, all, almost, alternative, amy, an, and, angel, aoshima, are, around, art, artist, as, assemble, at, away, baltic, barrel, based, be, beautiful, bell, birdhouse, biscuit, black, blomst, blue, blum, bob, bone, book, bookend, bottle, bound, bowl, box, breakfast, breer, bring, britain, brooch, bunnies, bunny, but, by, camera, can, cannot, car, carter, carton, catalogue, catchphrase, ceramic, ceramics, children, china, classic, coffee, coincide, cold, colour, colourful, combines, comes, contemporary, cotton, create, cup, cups, cushion, cute, cycle, d, dan, danish, days, dear, decoration, design, designed, designer, designers, designs, desirable, desk, dessert, devine, dinner, divine, dolphin, doormat, drink, duke, east, edition, egg, enamel, enough, everywhere, exclusive, exhibition, exhibitor, extra, fabien, fabulous, famous, fans, feature, featured, features, featuring, film, finish, flask, flip, flower, folklore, for, form, former, four, friend, from, fruit, fun, gas, gateshead, geordies, george, get, giclee, gift, gilbert, gin, glass, gold, good, graham, grand, great, hand, hanna, has, have, heart, high, his, holdsworth, home, hot, hours, how, humble, iconic, ideal, image, images, in, inspired, into, intricate, is, it, italian, james, japanese, jar, jim, jon, jug, just, keep, kiely, kit, kozyndan, latest, levinson, life, limited, lithographic, little, london, look, loop, love, loves, lunch, made, majesty, make, makes, masterpiece, match, matching, message, milk, moneybox, moomin, more, morris, most, mounted, mr, mug, mugs, murakami, necklace, new, newcastle, nice, nominated, nominee, north, not, notebooks, numbered, of, off, on, one, only, ono, or, orla, other, our, out, own, paintings, pair, paper, park, pattern, pepper, perfect, petal, pinhole, planets, plant, plastic, plate, plates, polly, poore, porcelain, poster, pot, pots, practical, present, print, prints, prize, produced, public, pulled, push, quality, range, read, rene, rinse, rob, robert, roberta, romantic, run, ryan, s, sally, salt, say, screen, screenprinted, sculpture, sculptures, seaside, season, seasons, seletti, series, set, sharpener, shaw, she, shirt, shop, short, signed, simple, sketch, slogan, smith, so, soft, souvenir, special, spiral, spring, stand, striped, sturdy, style, stylish, sugar, summer, susan, t, tableware, takashi, take, takes, tap, tatty, tea, that, the, their, there, thermo, these, this, those, throw, tidy, tin, to, top, toy, traditional, transform, tree, turner, two, up, use, used, vase, verschaere, very, visitors, wall, was, watch, water, well, westergaard, when, which, whitby, white, who, will, winter, with, woman, works, would, wrapped, yet, yoko, yorkshire, you, your, 
+
+
+Words density
+
+ 404 the
+ 344 and
+ 332 a
+ 308 of
+ 198 cm
+ 192 in
+ 148 this
+ 148 by
+ 140 is
+ 134 s
+ 134 it
+ 118 to
+ 118 baltic
+ 110 with
+ 104 for
+ 100 x
+  96 from
+  80 edition
+  72 on
+  70 artist
+  68 print
+  64 your
+  50 high
+  48 limited
+  46 made
+  44 design
+  42 signed
+  42 has
+  42 box
+  42 at
+  42 are
+  40 gift
+  40 an
+  38 have
+  36 style
+  36 size
+  36 designer
+  36 also
+  34 these
+  34 stands
+  34 shaw
+  34 prints
+  34 one
+  34 numbered
+  34 designers
+  34 any
+  32 which
+  32 part
+  32 black
+  32 available
+

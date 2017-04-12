@@ -1,0 +1,75 @@
+the following 3 scripts were created by david coxon for floriculture to analyse responses to course feedback.
+
+################## paste into terminal ###################
+this version will list only the interesting words but does't tell you how often they were used.
+
+if cd $HOME/Desktop; 
+then echo "success" 
+else
+exit 2
+fi
+echo "Total word count" >Lexion.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | wc -l >>Lexion.txt;
+echo "" >>Lexion.txt;
+echo "Unique word count">>Lexion.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>Lexion.txt;
+echo "" >>Lexion.txt;
+echo "Interesting word count">>Lexion.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - words.txt | wc -l >>Lexion.txt;
+echo "" >>Lexion.txt;
+echo "Interesting words">>Lexion.txt;
+echo "" >>Lexion.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n'|sort |uniq|comm -23 - words.txt >>Lexion.txt
+
+################## paste into terminal ###################
+this version will all the words but also shows you how often they were used.
+
+if cd $HOME/Desktop; 
+then echo "success" 
+else
+exit 2
+fi
+echo "Total word count" >Lexion2.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | wc -l >>Lexion2.txt;
+echo "" >>Lexion2.txt;
+echo "Unique word count">>Lexion2.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>Lexion2.txt;
+echo "" >>Lexion2.txt;
+echo "Interesting word count">>Lexion2.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - words.txt | wc -l >>Lexion2.txt;
+echo "" >>Lexion2.txt;
+echo "Word Density">>Lexion2.txt;
+echo "" >>Lexion2.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n'|sort |uniq -c| sort -nr>>Lexion2.txt
+
+################## paste into terminal ###################
+this version will compare two sets of words and show you which were unique to each.
+text files should be named text.txt and text2.txt
+
+if cd $HOME/Desktop; 
+then echo "success" 
+else
+exit 2
+fi
+
+echo "Words in Common" >Lexion3.txt;
+tr 'A-Z' 'a-z' <text2.txt | tr -cs 'a-z' '\n'|sort |uniq| sort >list2sorted.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -12 - list2sorted.txt | wc -l >>Lexion3.txt;
+
+echo "" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -12 - list2sorted.txt |sort>>Lexion3.txt;
+
+echo "" >>Lexion3.txt;
+echo "Unique to text1" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -23 - list2sorted.txt | wc -l >>Lexion3.txt;
+echo "" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -23 - list2sorted.txt|sort >>Lexion3.txt;
+
+echo "" >>Lexion3.txt;
+echo "Unique to text2" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -13 - list2sorted.txt | wc -l >>Lexion3.txt;
+echo "" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -13 - list2sorted.txt |sort>>Lexion3.txt;
+
+rm list2sorted.txt
+

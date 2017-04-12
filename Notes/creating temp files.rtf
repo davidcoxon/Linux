@@ -1,0 +1,32 @@
+There are many ways to create temporary files but it is good practice to put these in /tmp
+for example you could create 2 files in the temp use:
+
+tmp1=/tmp/dc1.tmp
+tmp2=/tmp/dc2.tmp
+
+once you have finished your script you could use rm to remove these files:
+
+rm $tmp1 $tmp2
+
+generally its a good idea to create these files as variable that way when you call them during a script you don't need to type in the entire file path each time.
+
+when you are creating temp files it is good practice to use a self documenting name for example work might imply its a working file that will have data swapped in and out of it, adding your initials indicated that you created it.
+
+To avoid creating a temporary file that already exists you can use $$ to add the active process number to the file which will help prevent any reuse of the same temp file name for example
+
+tmp1=/tmp/dc1.$$.tmp
+tmp2=/tmp/dc2.$$
+
+again using rm $tmp1 $tmp2 at the end to remove the files
+
+mktemp is another way to generate a spacial kind of temporary file, that would look something like this
+
+work1=$(mktemp )
+
+rm $work1
+
+DEV/NULL
+
+If you create something that you want to immediately throw away, for example a test for an if command that has no function other that to see if something is there or not the system has a special place to get rid of these outputs that prevents them using up space or resources, that place is /dev/null and example of sending a directory list to this would be:
+
+ls > /dev/null

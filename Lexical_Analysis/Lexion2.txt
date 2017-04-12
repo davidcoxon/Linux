@@ -1,0 +1,29 @@
+total word count
+     187
+Unique word count
+      25
+boundaries
+carbs
+characters
+cotswold
+disciplines
+discovering
+hardmoors
+having
+hours
+imagined
+landscapes
+marathons
+miles
+personalities
+proteins
+races
+reasons
+required
+runs
+salts
+shapes
+stations
+sugars
+trails
+ultras

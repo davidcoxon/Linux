@@ -1,0 +1,30 @@
+This is a short script that takes a file called text.txt and converts all the words to lowercase, sorts them into alphabetical order, removes duplicate words and common words (words like like a, an, and, but - these are taken from a file called words.txt) it then outputs a word count and list of words to a file called lexicon.txt. 
+
+This is based on the idea of a lexical value that describes the range of vocabulary used in an piece of text. 
+
+There are about 600 words used in every day english, a tabloid publication might use few words outside of those 600 words a broadsheet would be likely to use more words outside of that list, so if you replaced the words.txt file with those 600 every day words you could get a measure of how highbrow a piece of text is.
+
+Another aplication of lexical analysis might be to look for uniqueness of words within pieces of text used in website to identify keywords and to see what search engines might see if it looked at the text.
+
+The script could quite easily be adapted so that it could identify word density to see which words were used most often within a piece of text 
+
+Within the /usr/share/dict/ directory there are a number of files including propernames, connectives, words, web2 and web2a that contain lists of words than can be used in this analysis.
+
+All the files should be on the desktop for script1 to work while the text.txt file should be on the desktop for script2 to work.
+
+bugs:
+one of the problems with the dictionary file is that it does not contain plurals, so it may miss identify some words as unique
+
+**************************************************************************
+script 1
+**************************************************************************
+
+cd Desktop;echo "total word count" >lexion.txt; tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>Lexion.txt;echo "Unique word count">>lexion.txt; tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq|comm -23 - words.txt | wc -l >>Lexion.txt;tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n'|sort |uniq|comm -23 - words.txt >>Lexion.txt
+
+**************************************************************************
+script 2
+**************************************************************************
+
+echo "total word count" >//Users/davidcoxon/Desktop/Lexion.txt; tr 'A-Z' 'a-z' <//Users/davidcoxon/Desktop/text.txt | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>//Users/davidcoxon/Desktop/Lexion.txt;echo "Unique word count">>//Users/davidcoxon/Desktop/Lexion.txt; tr 'A-Z' 'a-z' <//Users/davidcoxon/Desktop/text.txt | tr -cs 'a-z' '\n' | sort | uniq |comm -23 - //usr/share/dict/words | wc -l >>//Users/davidcoxon/Desktop/Lexion.txt;tr 'A-Z' 'a-z' <//Users/davidcoxon/Desktop/text.txt | tr -cs 'a-z' '\n' | sort | uniq |comm -23 - //usr/share/dict/words >>//Users/davidcoxon/Desktop/Lexion.txt
+
+

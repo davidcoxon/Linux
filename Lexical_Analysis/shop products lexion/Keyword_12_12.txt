@@ -1,0 +1,251 @@
+Keyword	Visits	Pages / Visit	Avg. Visit Duration	% New Visits	Bounce Rate
+	1.	(not provided)	209	7.03	00:03:27	72.73%	30.14%
+	2.	baltic shop	136	13.42	00:05:01	58.82%	13.97%
+	3.	george shaw prints	30	6.57	00:02:31	73.33%	30.00%
+	4.	grayson perry scarf	28	1.21	00:00:02	96.43%	92.86%
+	5.	the baltic shop	13	12.00	00:05:54	46.15%	0.00%
+	6.	baltic gallery shop	12	12.25	00:04:20	83.33%	8.33%
+	7.	baltic mill shop	11	18.45	00:05:57	81.82%	9.09%
+	8.	baltic shop online	10	6.60	00:01:27	90.00%	20.00%
+	9.	baltic shop newcastle	9	21.89	00:09:11	77.78%	0.00%
+	10.	baltic art gallery shop	7	14.57	00:08:05	71.43%	0.00%
+	11.	baltic gift shop	7	31.14	00:10:33	71.43%	0.00%
+	12.	baltic bookshop	6	3.50	00:00:19	100.00%	50.00%
+	13.	baltic products	6	5.67	00:07:40	83.33%	0.00%
+	14.	frida kahlo necklace tatty devine	6	4.33	00:01:42	16.67%	66.67%
+	15.	angel of the north gifts	5	10.80	00:03:27	100.00%	20.00%
+	16.	baltic mugs	5	15.60	00:03:06	80.00%	0.00%
+	17.	baltic prints	5	9.40	00:03:27	80.00%	0.00%
+	18.	grayson perry gifts	5	3.20	00:00:29	100.00%	60.00%
+	19.	angel of the north keyring	4	5.50	00:02:37	100.00%	25.00%
+	20.	angel of the north necklace	4	2.50	00:00:27	100.00%	50.00%
+	21.	angel of the north ornament	4	1.50	00:00:23	100.00%	75.00%
+	22.	angel of the north shop	4	11.75	00:03:16	75.00%	50.00%
+	23.	baltic online shop	4	16.75	00:03:45	75.00%	0.00%
+	24.	buy george shaw prints	4	5.00	00:01:10	100.00%	25.00%
+	25.	george shaw paintings for sale	4	6.00	00:00:58	100.00%	25.00%
+	26.	kozyndan bunny blossom baltic	4	1.75	00:00:22	0.00%	50.00%
+	27.	tyneside prints	4	1.75	00:00:27	75.00%	50.00%
+	28.	yoko ono toilet thoughts poster	4	3.00	00:02:07	25.00%	25.00%
+	29.	angel of the north badge	3	1.33	00:00:11	100.00%	66.67%
+	30.	angel of the north book end	3	7.67	00:05:20	33.33%	0.00%
+	31.	angel of the north keyrings	3	5.67	00:02:25	0.00%	33.33%
+	32.	angel of the north merchandise	3	4.33	00:00:46	100.00%	33.33%
+	33.	angel of the north push up toy	3	2.67	00:01:23	0.00%	66.67%
+	34.	baltic art shop	3	16.67	00:04:38	100.00%	0.00%
+	35.	baltic flour mill shop	3	18.33	00:07:43	100.00%	0.00%
+	36.	baltic museum shop	3	11.33	00:05:42	66.67%	33.33%
+	37.	balticshop	3	2.67	00:01:06	100.00%	66.67%
+	38.	grayson perry silk scarf	3	1.00	00:00:00	100.00%	100.00%
+	39.	harland miller print	3	1.33	00:00:02	66.67%	66.67%
+	40.	mr dob	3	7.67	00:02:29	0.00%	0.00%
+	41.	push up collapsible wooden toys	3	4.00	00:00:48	100.00%	66.67%
+	42.	rob ryan ceramics	3	1.00	00:00:00	100.00%	100.00%
+	43.	tatty devine 3d glasses	3	1.00	00:00:00	100.00%	100.00%
+	44.	tatty devine frida kahlo brooch	3	6.33	00:03:49	66.67%	33.33%
+	45.	the baltic shop gateshead	3	11.33	00:03:14	66.67%	0.00%
+	46.	why aye pet mug	3	51.00	00:11:58	100.00%	0.00%
+	47.	angel of the north baltic	2	7.00	00:01:18	100.00%	0.00%
+	48.	angel of the north collapsing toy	2	37.50	00:18:51	50.00%	0.00%
+	49.	angel of the north gift shop	2	5.00	00:00:52	50.00%	0.00%
+	50.	angel of the north souvenirs	2	5.50	00:01:13	100.00%	0.00%
+	51.	angel of the north toy	2	4.50	00:00:52	100.00%	50.00%
+	52.	baby lapin night light baltic	2	1.50	00:02:03	50.00%	50.00%
+	53.	baltic angel of the north	2	7.00	00:00:59	100.00%	0.00%
+	54.	baltic george shaw	2	20.50	00:28:09	50.00%	0.00%
+	55.	baltic murakami	2	1.50	00:00:06	0.00%	50.00%
+	56.	baltic newcastle shop	2	25.00	00:07:09	100.00%	0.00%
+	57.	baltic online	2	6.00	00:01:24	50.00%	50.00%
+	58.	baltic posters	2	3.50	00:00:25	100.00%	50.00%
+	59.	baltic sho	2	9.00	00:00:41	100.00%	0.00%
+	60.	baltic shop flow	2	1.00	00:00:00	50.00%	100.00%
+	61.	baltic shop murakami	2	13.00	00:09:27	50.00%	50.00%
+	62.	baltic shop prints	2	7.00	00:00:41	50.00%	50.00%
+	63.	baltic shop seletti sugar	2	14.50	00:17:05	0.00%	0.00%
+	64.	bunny blossom poster baltic	2	1.50	00:00:03	50.00%	50.00%
+	65.	dear gateshead picture	2	14.50	00:05:01	50.00%	50.00%
+	66.	dear newcastle sally poore	2	1.00	00:00:00	100.00%	100.00%
+	67.	george shaw	2	1.50	00:00:01	100.00%	50.00%
+	68.	george shaw artist prints	2	5.00	00:01:07	100.00%	50.00%
+	69.	george shaw limited edition print	2	16.00	00:07:28	50.00%	0.00%
+	70.	george shaw print	2	9.50	00:04:07	100.00%	0.00%
+	71.	george shaw prints for sale	2	2.50	00:00:28	100.00%	0.00%
+	72.	grayson perry scarves	2	1.00	00:00:00	50.00%	100.00%
+	73.	grayson perry silk scarves	2	1.00	00:00:00	100.00%	100.00%
+	74.	harland miller prints	2	1.00	00:00:00	100.00%	100.00%
+	75.	jim shaw baltic edition	2	1.50	00:00:09	0.00%	50.00%
+	76.	jim shaw poster	2	9.50	00:05:36	100.00%	0.00%
+	77.	jim shaw posters	2	3.00	00:09:26	0.00%	0.00%
+	78.	jim shaw the rinse cycle	2	1.50	00:00:04	0.00%	50.00%
+	79.	kozyndan prints	2	4.00	00:08:49	100.00%	50.00%
+	80.	kozyndan uprisings	2	10.00	00:07:09	50.00%	50.00%
+	81.	miho his majesty	2	1.00	00:00:00	50.00%	100.00%
+	82.	miss van oldie 3	2	1.50	00:03:16	0.00%	50.00%
+	83.	paper castle	2	1.50	00:00:02	100.00%	50.00%
+	84.	rob ryan	2	2.50	00:00:19	100.00%	0.00%
+	85.	seletti gold egg tray	2	2.50	00:00:54	50.00%	50.00%
+	86.	shop.balticmills.com	2	3.00	00:00:30	50.00%	50.00%
+	87.	tatty devine swinging girl necklace	2	1.00	00:00:00	100.00%	100.00%
+	88.	the baltic gift shop	2	4.50	00:00:46	50.00%	50.00%
+	89.	the baltic shop jewellery	2	3.00	00:00:25	0.00%	0.00%
+	90.	the sly and unseen day	2	4.50	00:03:01	100.00%	0.00%
+	91.	wey aye pet mug	2	1.00	00:00:00	50.00%	100.00%
+	92.	why aye pet mug baltic	2	1.00	00:00:00	0.00%	100.00%
+	93.	"angel of the north" christmas decoration	1	1.00	00:00:00	100.00%	100.00%
+	94.	"angel of the north" gift	1	34.00	00:21:51	100.00%	0.00%
+	95.	"george shaw baltic	1	6.00	00:01:17	100.00%	0.00%
+	96.	50s glasses	1	17.00	00:01:13	100.00%	0.00%
+	97.	alice melvin bird poster	1	6.00	00:00:21	100.00%	0.00%
+	98.	allium ceiling light	1	1.00	00:00:00	100.00%	100.00%
+	99.	andrea zittel artist at the baltic	1	2.00	00:00:01	100.00%	0.00%
+	100.	angel keyrings	1	1.00	00:00:00	100.00%	100.00%
+	101.	angel north hifts	1	1.00	00:00:00	100.00%	100.00%
+	102.	angel north push up toy	1	10.00	00:08:33	0.00%	0.00%
+	103.	angel of north baltic christmas decoration	1	2.00	00:00:22	100.00%	0.00%
+	104.	angel of the north	1	2.00	00:00:20	100.00%	0.00%
+	105.	angel of the north art prints	1	1.00	00:00:00	100.00%	100.00%
+	106.	angel of the north book	1	19.00	00:17:46	0.00%	0.00%
+	107.	angel of the north bookends	1	1.00	00:00:00	100.00%	100.00%
+	108.	angel of the north chain	1	1.00	00:00:00	100.00%	100.00%
+	109.	angel of the north christmas ornament	1	1.00	00:00:00	100.00%	100.00%
+	110.	angel of the north christmas tree decoration	1	3.00	00:00:45	100.00%	0.00%
+	111.	angel of the north for christmas trees	1	3.00	00:00:40	100.00%	0.00%
+	112.	angel of the north pin badge	1	2.00	00:00:23	100.00%	0.00%
+	113.	angel of the north print	1	1.00	00:00:00	0.00%	100.00%
+	114.	angel of the north prints	1	3.00	00:00:38	100.00%	0.00%
+	115.	angel of the north products	1	6.00	00:03:39	0.00%	0.00%
+	116.	angel of the north tea towel	1	1.00	00:00:00	100.00%	100.00%
+	117.	angel of the north top of tree	1	17.00	00:02:54	100.00%	0.00%
+	118.	angel of the north wooden toy	1	1.00	00:00:00	100.00%	100.00%
+	119.	angel of the north xmas tree	1	4.00	00:00:38	0.00%	0.00%
+	120.	angel of the north xmas tree baltic	1	1.00	00:00:00	100.00%	100.00%
+	121.	angel of the north-keyring	1	15.00	00:03:08	100.00%	0.00%
+	122.	angela of the north gifts	1	1.00	00:00:00	100.00%	100.00%
+	123.	art angel pin enamel	1	1.00	00:00:00	100.00%	100.00%
+	124.	art of cardboard clock	1	2.00	00:00:07	100.00%	0.00%
+	125.	art prints on products	1	8.00	00:01:18	100.00%	0.00%
+	126.	b.square! limited edition t shirt baltic mill	1	1.00	00:00:00	100.00%	100.00%
+	127.	baby lapin night light uk	1	1.00	00:00:00	0.00%	100.00%
+	128.	bad skateboarders tshirt baltic	1	4.00	00:00:34	100.00%	0.00%
+	129.	baltic angel north tree	1	5.00	00:00:33	100.00%	0.00%
+	130.	baltic angel tree top	1	1.00	00:00:00	0.00%	100.00%
+	131.	baltic art	1	1.00	00:00:00	100.00%	100.00%
+	132.	baltic art gallery art shop	1	43.00	00:18:43	100.00%	0.00%
+	133.	baltic art prints	1	1.00	00:00:00	0.00%	100.00%
+	134.	baltic arts seletti egg holder	1	7.00	00:03:29	100.00%	0.00%
+	135.	baltic bento box	1	11.00	00:01:00	100.00%	0.00%
+	136.	baltic bookend	1	3.00	00:01:39	100.00%	0.00%
+	137.	baltic boookshop	1	11.00	00:02:46	100.00%	0.00%
+	138.	baltic centre shop	1	33.00	00:16:16	100.00%	0.00%
+	139.	baltic china shop	1	4.00	00:00:50	100.00%	0.00%
+	140.	baltic dear gateshead	1	1.00	00:00:00	0.00%	100.00%
+	141.	baltic dhop	1	14.00	00:01:13	0.00%	0.00%
+	142.	baltic flour mill shops	1	9.00	00:02:23	100.00%	0.00%
+	143.	baltic flour shop	1	36.00	00:05:04	100.00%	0.00%
+	144.	baltic gallery dwg	1	1.00	00:00:00	100.00%	100.00%
+	145.	baltic galllery shop	1	1.00	00:00:00	0.00%	100.00%
+	146.	baltic gateshead limited edition print	1	2.00	00:01:28	100.00%	0.00%
+	147.	baltic geordie mug	1	13.00	00:07:24	0.00%	0.00%
+	148.	baltic george shaw sly day	1	14.00	00:11:48	0.00%	0.00%
+	149.	baltic gifts	1	5.00	00:01:54	100.00%	0.00%
+	150.	baltic lights	1	1.00	00:00:00	100.00%	100.00%
+	151.	baltic miho bird house	1	4.00	00:00:12	100.00%	0.00%
+	152.	baltic mill on line shop	1	3.00	00:07:22	0.00%	0.00%
+	153.	baltic mill shop online	1	17.00	00:05:19	100.00%	0.00%
+	154.	baltic mills art	1	23.00	00:06:19	100.00%	0.00%
+	155.	baltic millshop	1	8.00	00:01:22	0.00%	0.00%
+	156.	baltic mug	1	32.00	00:10:07	100.00%	0.00%
+	157.	baltic mug tyne	1	1.00	00:00:00	0.00%	100.00%
+	158.	baltic notebook	1	1.00	00:00:00	100.00%	100.00%
+	159.	baltic place shop	1	1.00	00:00:00	100.00%	100.00%
+	160.	baltic poster	1	1.00	00:00:00	100.00%	100.00%
+	161.	baltic procucts on line	1	10.00	00:01:17	100.00%	0.00%
+	162.	baltic rabbit poster	1	2.00	00:00:36	100.00%	0.00%
+	163.	baltic shop book pusher	1	16.00	00:02:08	100.00%	0.00%
+	164.	baltic shop bunny prints	1	1.00	00:00:00	0.00%	100.00%
+	165.	baltic shop decoration	1	5.00	00:00:35	100.00%	0.00%
+	166.	baltic shop edition prints	1	29.00	00:04:15	0.00%	0.00%
+	167.	baltic shop japanese bunnies	1	2.00	00:00:05	100.00%	0.00%
+	168.	baltic shop magazine	1	1.00	00:00:00	100.00%	100.00%
+	169.	baltic shop products	1	21.00	00:04:01	100.00%	0.00%
+	170.	baltic shop rene	1	2.00	00:00:04	100.00%	0.00%
+	171.	baltic shop sharpener	1	1.00	00:00:00	100.00%	100.00%
+	172.	baltic shop tea towel	1	1.00	00:00:00	0.00%	100.00%
+	173.	baltic shop toronto	1	4.00	00:00:34	100.00%	0.00%
+	174.	baltic shop tunnocks coasters	1	2.00	00:18:47	100.00%	0.00%
+	175.	baltic shop whitby	1	1.00	00:00:00	0.00%	100.00%
+	176.	baltic shopl	1	68.00	00:22:28	0.00%	0.00%
+	177.	baltic shopping	1	5.00	00:01:01	100.00%	0.00%
+	178.	baltic shopping centers	1	3.00	00:00:52	100.00%	0.00%
+	179.	baltic souvenir online kaufen	1	4.00	00:00:28	100.00%	0.00%
+	180.	baltic t shirt	1	5.00	00:01:34	100.00%	0.00%
+	181.	baltic t-shirt	1	25.00	00:59:33	0.00%	0.00%
+	182.	baltic tunnock	1	5.00	00:02:04	100.00%	0.00%
+	183.	baltic uprisings kosyndan	1	4.00	00:00:21	100.00%	0.00%
+	184.	baltic web site gifts	1	15.00	00:04:36	100.00%	0.00%
+	185.	baltic why aye mug	1	2.00	00:00:15	100.00%	0.00%
+	186.	balticmill.com/shop	1	7.00	00:01:59	100.00%	0.00%
+	187.	baltiv shop	1	53.00	00:18:52	100.00%	0.00%
+	188.	balyic shop	1	1.00	00:00:00	100.00%	100.00%
+	189.	bento box the baltic	1	9.00	00:01:57	100.00%	0.00%
+	190.	best mug silhouette	1	1.00	00:00:00	100.00%	100.00%
+	191.	bird salad bowl	1	1.00	00:00:00	100.00%	100.00%
+	192.	biscuit barrel	1	1.00	00:00:00	100.00%	100.00%
+	193.	black and yellow tea towels	1	1.00	00:00:00	100.00%	100.00%
+	194.	blatic shop	1	22.00	00:06:41	100.00%	0.00%
+	195.	bookends design	1	2.00	00:00:13	100.00%	0.00%
+	196.	bunny blossom baltic	1	10.00	00:04:29	0.00%	0.00%
+	197.	bunny blossom print baltic	1	5.00	00:02:16	0.00%	0.00%
+	198.	buy a george shaw print	1	5.00	00:00:21	100.00%	0.00%
+	199.	buy george shaw prints the sly and unseen day	1	3.00	00:00:52	100.00%	0.00%
+	200.	buy online the baltic shop	1	1.00	00:00:00	100.00%	100.00%
+	201.	buy sally poore prints	1	13.00	00:02:41	100.00%	0.00%
+	202.	cardboard clock company products	1	1.00	00:00:00	100.00%	100.00%
+	203.	cardboard pendulum clock,	1	1.00	00:00:00	100.00%	100.00%
+	204.	casa cabana by baltic	1	4.00	00:00:16	100.00%	0.00%
+	205.	dan holdsworth signed print	1	1.00	00:00:00	100.00%	100.00%
+	206.	dear newcastle baltic	1	2.00	00:00:11	100.00%	0.00%
+	207.	dear newcastle print	1	3.00	00:01:35	100.00%	0.00%
+	208.	dear newcastle screen print	1	3.00	00:00:16	100.00%	0.00%
+	209.	design products gifts	1	13.00	00:05:50	100.00%	0.00%
+	210.	designer artwork in shop	1	1.00	00:00:00	100.00%	100.00%
+	211.	designer products	1	1.00	00:00:00	100.00%	100.00%
+	212.	dotty magazine rac	1	2.00	00:00:37	0.00%	0.00%
+	213.	dotty magazine rack	1	1.00	00:00:00	100.00%	100.00%
+	214.	faceplate	1	7.00	00:00:27	100.00%	0.00%
+	215.	fantastic bird house	1	11.00	00:04:53	100.00%	0.00%
+	216.	festive sickbag	1	1.00	00:00:00	100.00%	100.00%
+	217.	fiona crisp pantheon baltic	1	6.00	00:02:02	0.00%	0.00%
+	218.	fiona crisp the pantheon	1	3.00	00:05:25	0.00%	0.00%
+	219.	folkloredesign	1	1.00	00:00:00	100.00%	100.00%
+	220.	freda kahlo jewellery baltic	1	2.00	00:00:17	0.00%	0.00%
+	221.	frida kahlo brooch plate	1	1.00	00:00:00	100.00%	100.00%
+	222.	frida kahlo brooch tatty devine	1	1.00	00:00:00	0.00%	100.00%
+	223.	geordie mugs baltic	1	57.00	00:12:00	100.00%	0.00%
+	224.	george shaw art print	1	6.00	00:00:50	0.00%	0.00%
+	225.	george shaw art sale	1	1.00	00:00:00	100.00%	100.00%
+	226.	george shaw artist print	1	7.00	00:01:19	100.00%	0.00%
+	227.	george shaw baltic	1	5.00	00:02:25	100.00%	0.00%
+	228.	george shaw baltic book	1	2.00	00:01:53	100.00%	0.00%
+	229.	george shaw baltic playtime	1	1.00	00:00:00	100.00%	100.00%
+	230.	george shaw buy	1	1.00	00:00:00	0.00%	100.00%
+	231.	george shaw painter book	1	25.00	00:11:55	100.00%	0.00%
+	232.	george shaw poster	1	2.00	00:00:37	100.00%	0.00%
+	233.	george shaw posters prints	1	1.00	00:00:00	100.00%	100.00%
+	234.	george shaw print the	1	2.00	00:00:09	0.00%	0.00%
+	235.	george shaw products	1	15.00	00:01:38	100.00%	0.00%
+	236.	george shaw sly and unseen day	1	1.00	00:00:00	0.00%	100.00%
+	237.	george shaw sly unseen day	1	1.00	00:00:00	0.00%	100.00%
+	238.	george shaw the gamble	1	2.00	00:00:10	0.00%	0.00%
+	239.	george shaw turner poster	1	24.00	00:45:49	0.00%	0.00%
+	240.	george shaw watercolours	1	1.00	00:00:00	100.00%	100.00%
+	241.	george shaw: the sly and unseen day	1	18.00	00:10:51	100.00%	0.00%
+	242.	georges shaw books	1	3.00	00:00:21	100.00%	0.00%
+	243.	geroge shaw poster baltic	1	2.00	00:00:33	0.00%	0.00%
+	244.	get carter car park	1	3.00	00:00:35	100.00%	0.00%
+	245.	gilbert and george brooches balticmill.com	1	1.00	00:00:00	0.00%	100.00%
+	246.	gilbert and george necklace	1	11.00	00:03:22	100.00%	0.00%
+	247.	grayson perry silk scarf buy	1	1.00	00:00:00	100.00%	100.00%
+	248.	grayston perry scarf	1	1.00	00:00:00	100.00%	100.00%
+	249.	hana blomst bento box	1	1.00	00:00:00	100.00%	100.00%
+	250.	hana blomst tableware	1	3.00	00:00:29	0.00%	0.00%

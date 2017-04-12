@@ -1,0 +1,217 @@
+Text Analysis : Flowculture twitter versus facebook
+Ran on : 15th December 2012
+
+*****************************************************
+                       Group 1
+*****************************************************
+
+Document count
+       1
+
+Total word count
+     932
+
+Unique word count
+     420
+
+Interesting word count
+     264
+
+Words unique to Group
+     280
+
+ace, acechat, acelivechat, against, aged, ago, alderman, alex, allowed, almag, am, amazing, answers, anthony, aq, archives, aren, article, artnews, artsfunding, asking, attacks, balticmill, banished, bauble, bbcnews, because, behalf, being, between, blogs, blues, books, brickfield, bruce, bumper, but, c, caseforculture, ceremony, civic, ckw, cla, claytor, code, comments, community, connection, culturecode, culturelearning, culturemag, cut, davis, digital, digitalinclusion, digitalstorytelling, diversity, down, downfall, download, e, ebacc, ember, employees, evans, events, exited, fab, fancy, favourite, felt, festivalne, festne, ff, final, finished, fiona, fionaevansplays, funding, fxbow, ga, gdn, gdnculturepros, gifted, gillian, given, gnrc, gnrculture, gorgeous, gosforth, gove, greatnorthrunculture, group, growth, gu, guardian, guardianbooks, h, hannah, haswell, having, he, head, heaton, henry, hhjvspb, history, hl, htclaytor, https, humanity, incomplete, inspired, instagr, into, ipads, iris, janet, janetedavis, jl, keep, knihl, learner, learningonthefrontline, lee, library, list, listening, ll, lobbying, lockey, london, look, luxury, made, mag, magazine, manifesto, many, maria, mau, mentor, message, met, michael, miller, minimal, monday, months, more, morning, mp, mulled, museum, mushroomworks, my, myself, n, national, ne, nelove, newcastlecuts, nicol, ning, offer, oldheaton, opportunity, orating, org, organdonationuk, ow, p, page, pages, paralympics, pawson, pb, photographs, pic, place, plain, plans, poem, possible, price, print, privatization, privilege, profiles, programmes, proj, project, proposed, pros, protest, protesting, public, qczelt, qv, rd, reading, recruiting, region, remember, repeat, reply, rgs, rgsenglishnews, richards, richardsonkelly, roll, sally, sallylockey, savencllibraries, savenewcastle, say, says, scary, science, selects, shakespeare, she, showcasing, single, slnh, snows, some, space, special, spending, stephenson, story, summary, survey, talk, teaching, tell, tf, thank, thefactorytc, thejournalnews, then, thepixelpalace, thing, thinking, till, times, tivnmmr, toonlibaries, toonlibraries, touched, transcript, trewhitt, turnerprize, tw, unimaginable, us, v, view, want, was, wed, were, whatson, when, where, why, william, wine, without, won, worth, write, writer, wvvmla, xmas, year, yourself, yr
+
+Words density
+
+  77 culture
+  68 flo
+  19 the
+  18 to
+  14 http
+  12 com
+  12 a
+  11 for
+  11 and
+  10 of
+   9 on
+   9 it
+   9 in
+   7 you
+   7 www
+   7 s
+   7 arts
+   6 view
+   6 our
+   6 newcastle
+   6 facebook
+   5 what
+   5 today
+   5 p
+   5 news
+   5 memorybox
+   5 like
+   5 cuts
+   5 christmas
+   4 us
+   4 this
+   4 that
+   4 new
+   4 here
+   4 henry
+   4 heaton
+   4 from
+   4 centre
+   4 at
+   4 almag
+   4 alex
+   4 about
+   3 your
+   3 with
+   3 we
+   3 up
+   3 twitter
+   3 t
+   3 re
+   3 pros
+
+
+*****************************************************
+                       Group 2
+*****************************************************
+
+Document count
+       1
+
+Total word count
+     859
+
+Unique word count
+     378
+
+Interesting word count
+     223
+
+Words unique to group
+     238
+
+advancing, after, agree, aidan, aiden, answering, approaches, arthouse, artist, ask, asks, assessing, attend, attractions, awarded, baltic, based, before, below, bird, biscuit, budget, by, calling, cameron, can, carolyn, chat, chief, chris, christmassy, church, city, click, closes, collection, comic, cooke, cope, creative, cultural, culverts, cumbria, curiosity, current, david, dec, december, decision, decorating, delegate, designers, display, distribution, doc, doing, drop, drupalncc, each, early, elf, emergency, enchanted, ends, engagement, eve, exciting, executive, exhibition, far, features, feel, fest, files, flickr, fling, friday, full, futures, gayle, goes, going, gone, gov, government, grainger, great, his, hope, house, houses, illustration, images, impact, impossible, innovating, innovative, inside, inspiration, interested, interview, issue, itv, jackson, jess, jim, julie, just, laing, last, latest, leader, let, letter, likes, link, live, looks, marble, meeting, might, miss, missed, mix, moesby, moment, month, mushroom, nearly, newcastlegateshead, newcastlelibraries, next, night, noble, nominee, noon, not, nov, november, old, one, online, open, ousburn, ouseburn, out, parks, part, pass, paul, people, photos, policy, practice, practicing, prices, prize, programme, provides, question, questions, read, record, regarding, register, registration, related, report, researching, rosellastudios, run, safety, save, sees, sets, share, shared, shaw, sheffdocfest, sheffield, sites, snow, spaces, st, starts, status, street, studio, studios, summer, sunday, super, sutherland, talking, teach, tees, thanks, their, themes, there, theres, they, things, think, time, tin, tomorrow, trust, try, ts, tunnel, turner, tyne, unfair, upon, vat, victoria, video, videos, viewed, wakefield, wants, ways, wednesday, weekend, weeks, well, wettest, whatsonnortheast, will, winner, winter, winterfestival, works, wwwfileroot, x, years, young
+
+Words density
+
+  28 culture
+  26 flo
+  23 the
+  17 www
+  16 to
+  15 com
+  15 a
+  13 on
+  11 shared
+  11 s
+  11 and
+  10 blog
+   9 of
+   9 in
+   9 http
+   8 our
+   8 newcastle
+   8 link
+   8 at
+   8 art
+   7 for
+   7 council
+   6 you
+   6 via
+   6 north
+   5 your
+   5 uk
+   5 this
+   5 prize
+   5 online
+   5 new
+   5 arts
+   4 with
+   4 tyne
+   4 turner
+   4 th
+   4 recent
+   4 nov
+   4 most
+   4 it
+   4 is
+   4 from
+   4 england
+   4 be
+   4 bbc
+   4 all
+   3 workshops
+   3 works
+   3 wednesday
+   3 up
+
+
+*****************************************************
+                    Groups 1 and 2
+*****************************************************
+
+
+Words used by both groups 
+     140
+
+a, about, account, again, alan, all, an, and, any, anyone, are, art, artists, arts, at, available, bbc, be, been, bit, blog, book, centre, christmas, co, com, congratulations, contemporary, council, culture, cuts, date, davey, definitely, did, do, don, east, elizabeth, england, equalities, equality, evening, facebook, factory, festival, first, flo, for, free, fref, from, gallery, generations, get, go, hall, has, have, heart, her, here, http, i, if, in, industry, is, it, john, know, libraries, like, local, ly, making, memorybox, most, muses, new, newcastle, news, newsletter, north, now, of, office, older, on, organisation, our, over, personal, photo, please, pm, post, re, recent, recollections, ref, s, saturday, see, session, shopping, sign, so, stories, support, t, take, technology, th, that, the, this, through, to, today, twitter, uk, up, upto, use, very, via, we, week, what, who, win, with, work, workshops, would, writing, www, you, your
+
+
+Words density
+
+ 154 culture
+ 136 flo
+  38 the
+  36 to
+  28 http
+  24 com
+  24 a
+  22 for
+  22 and
+  20 of
+  18 on
+  18 it
+  18 in
+  14 you
+  14 www
+  14 s
+  14 arts
+  12 view
+  12 our
+  12 newcastle
+  12 facebook
+  10 what
+  10 today
+  10 p
+  10 news
+  10 memorybox
+  10 like
+  10 cuts
+  10 christmas
+   8 us
+   8 this
+   8 that
+   8 new
+   8 here
+   8 henry
+   8 heaton
+   8 from
+   8 centre
+   8 at
+   8 almag
+   8 alex
+   8 about
+   6 your
+   6 with
+   6 we
+   6 up
+   6 twitter
+   6 t
+   6 re
+   6 pros
+

@@ -1,0 +1,331 @@
+As part of an attempt to learn how to use linux and the terminal window on the mac, I have created  the following scripts. This is my first linux project so please forgive any obvious errors. The aim of the scripts is to help for the good people at flo_culture to analyse feedback they have received to course that they ran. The plan is for the scripts analyse the language used in the feedback and to identify any trends. 
+
+With thanks to Dougie Nesbit for his incredible patience and the lessons in Linux/Terminal along the way.
+
+################# version 1. short list ##################
+this version will list only the interesting words but does't tell you how often they were used.
+################## paste into terminal ###################
+
+if cd $HOME/Desktop; 
+then echo "success" 
+else
+exit 2
+fi
+echo "Total word count" >Lexion.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | wc -l >>Lexion.txt;
+echo "" >>Lexion.txt;
+echo "Unique word count">>Lexion.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>Lexion.txt;
+echo "" >>Lexion.txt;
+echo "Interesting word count">>Lexion.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - words.txt | wc -l >>Lexion.txt;
+echo "" >>Lexion.txt;
+echo "Interesting words">>Lexion.txt;
+echo "" >>Lexion.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n'|sort |uniq|comm -23 - words.txt >>Lexion.txt
+
+############### version 2 : word density #################
+this version will all the words shown but also shows you how often they were used.
+################## paste into terminal ###################
+
+if cd $HOME/Desktop; 
+then echo "success" 
+else
+exit 2
+fi
+echo "Total word count" >Lexion2.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | wc -l >>Lexion2.txt;
+echo "" >>Lexion2.txt;
+echo "Unique word count">>Lexion2.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>Lexion2.txt;
+echo "" >>Lexion2.txt;
+echo "Interesting word count">>Lexion2.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - words.txt | wc -l >>Lexion2.txt;
+echo "" >>Lexion2.txt;
+echo "Word Density">>Lexion2.txt;
+echo "" >>Lexion2.txt;
+tr 'A-Z' 'a-z' <text.txt | tr -cs 'a-z' '\n'|sort |uniq -c| sort -nr>>Lexion2.txt
+
+############### version 3: compare 2 files ################
+this version will compare two sets of words and show you which were unique to each.
+text files should be named text.txt and text2.txt
+################## paste into terminal ###################
+
+if cd $HOME/Desktop; 
+then echo "success" 
+else
+exit 2
+fi
+echo "Words in Common" >Lexion3.txt;
+tr 'A-Z' 'a-z' <text2.txt | tr -cs 'a-z' '\n'|sort |uniq| sort >list2sorted.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -12 - list2sorted.txt | wc -l >>Lexion3.txt;
+echo "" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -12 - list2sorted.txt |sort>>Lexion3.txt;
+echo "" >>Lexion3.txt;
+echo "Unique to text1" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -23 - list2sorted.txt | wc -l >>Lexion3.txt;
+echo "" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -23 - list2sorted.txt|sort >>Lexion3.txt;
+echo "" >>Lexion3.txt;
+echo "Unique to text2" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -13 - list2sorted.txt | wc -l >>Lexion3.txt;
+echo "" >>Lexion3.txt;
+tr 'A-Z' 'a-z' <text.txt| tr -cs 'a-z' '\n' | sort | uniq | comm -13 - list2sorted.txt |sort>>Lexion3.txt;
+rm list2sorted.txt
+
+############# version 4 : compiles responses #############
+this script will take a number of text files from a folder, convert them into a single document, extract the keywords and show how many times each was used.
+The folder containing the text files should be named responses and it should be stored on the desktop.
+################## paste into terminal ###################
+
+if cd $HOME/Desktop/responses; 
+then echo "success" 
+else
+exit 2
+fi
+cat *.txt >$HOME/Desktop/allfiles.tmp
+echo "Total document count" >$HOME/Desktop/Lexion4.txt;
+ls | wc -l >>$HOME/Desktop/Lexion4.txt;
+if cd $HOME/Desktop; 
+then echo "success" 
+else
+exit 2
+fi
+echo "" >>Lexion4.txt;
+echo "Total word count" >>Lexion4.txt;
+tr 'A-Z' 'a-z' <allfiles.tmp | tr -cs 'a-z' '\n' | sort | wc -l >>Lexion4.txt;
+echo "" >>Lexion4.txt;
+echo "Unique word count">>Lexion4.txt;
+tr 'A-Z' 'a-z' <allfiles.tmp | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>Lexion4.txt;
+echo "" >>Lexion4.txt;
+echo "Interesting word count">>Lexion4.txt;
+tr 'A-Z' 'a-z' <allfiles.tmp | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - words.txt | wc -l >>Lexion4.txt;
+echo "" >>Lexion4.txt;
+echo "Word Density">>Lexion4.txt;
+echo "" >>Lexion4.txt;
+tr 'A-Z' 'a-z' <allfiles.tmp | tr -cs 'a-z' '\n'|sort |uniq -c| sort -nr>>Lexion4.txt
+rm $HOME/Desktop/allfiles.tmp
+echo done
+
+
+######## version 5 : compares 2 sets of responses  ########
+this version is a rewritten version of version 4 that uses variables instead of fixed file  locations and allows groups of text files to be used instead of a single files. It take all the text files in a folder called group1 and compare them to the responses in a folder named group 2, merging the files, extracting the keywords and showing words common to both groups again those unique to each.
+The folders containing the text files should be named group1 and group2 which should be stored on the desktop. A dictionary file named words.txt storing word to considered uninteresting should also be stored on the desktop. The results will be output to a file named lexion5.txt saved on desktop.
+
+################## paste into terminal ###################
+
+group1=$HOME/Desktop/group1
+allgroup1=$HOME/Desktop/allgroup1.tmp
+group1sorted=$HOME/Desktop/group1sorted.tmp
+group2=$HOME/Desktop/group2
+allgroup2=$HOME/Desktop/allgroup2.tmp
+group2sorted=$HOME/Desktop/group2sorted.tmp
+desktop=$HOME/Desktop
+results=$HOME/Desktop/Lexion5.txt
+words=$HOME/Desktop/words.txt
+
+cd $group1
+for file in * ; do 
+   cat $file >> $allgroup1
+   echo "" >> $allgroup1
+done
+
+cd $group2
+for file in * ; do 
+   cat $file >> $allgroup2
+   echo "" >> $allgroup2
+done
+
+echo "Document count for Group 1" >$results
+ls | wc -l >>$results
+echo "" >>$results
+echo "Total word count Group 2" >>$results
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n' | sort | wc -l >>$results
+echo "" >>$results
+echo "Unique word count Group 1">>$results
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>$results
+echo "" >>$results
+echo "Interesting word count Group 1">>$results
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n'|sort |uniq| sort >$group1sorted
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n'|sort |uniq| sort >$group2sorted
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - $words | wc -l >>$results
+echo "" >>$results
+echo "Words unique to Group 1" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - $group2sorted | wc -l >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - $group2sorted |sort >>$results
+echo "" >>$results
+
+cd $group2
+
+echo "Document count for Group 2" >>$results
+ls | wc -l >>$results
+echo "" >>$results
+echo "Total word count Group 2" >>$results
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n' | sort | wc -l >>$results
+echo "" >>$results
+echo "Unique word count Group 2">>$results
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>$results
+echo "" >>$results
+echo "Interesting word count Group 2">>$results
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - $words | wc -l >>$results
+echo "" >>$results
+echo "Words unique to Group 2" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -13 - $group2sorted| wc -l >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -13 - $group2sorted  |sort>>$results
+echo "" >>$results
+echo "Words used by both groups " >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -12 - $group2sorted | wc -l >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -12 - $group2sorted |sort>>$results
+echo "" >>$results
+
+cd $desktop
+
+rm $allgroup1 
+rm $allgroup2
+rm $group1sorted
+rm $group2sorted
+echo done
+
+######## version 6 : improved version of version 5  ########
+this version is an updated version of version 5 that will take a number of text files from a folder called group1 and compare them to a set of responses from a folder called group 2, converting them into a single documents, extract the keywords and show how many times each  word was used.
+The folders containing the text files should be named groupa and groupb and they should be stored on the desktop. A dictionary file named words.txt should also be stored on the desktop and the results will be put on the desktop in a file called lexion5.txt
+################## paste into terminal ###################
+
+group1=$HOME/Desktop/group1
+allgroup1=$HOME/Desktop/allgroup1.tmp
+group1sorted=$HOME/Desktop/group1sorted.tmp
+group2=$HOME/Desktop/group2
+allgroup2=$HOME/Desktop/allgroup2.tmp
+group2sorted=$HOME/Desktop/group2sorted.tmp
+allgroups=$HOME/Desktop/allgroups.tmp
+desktop=$HOME/Desktop
+results=$HOME/Desktop/Lexion5.txt
+tempresults=$HOME/Desktop/Lexion5.tmp
+words=$HOME/Desktop/words.txt
+now=$(date +"%m-%d-%Y")
+density=50
+
+cd $group1
+for file in * ; do 
+   cat $file >> $allgroup1
+   echo "" >> $allgroup1
+done
+
+cd $group2
+for file in * ; do 
+   cat $file >> $allgroup2
+   echo "" >> $allgroup2
+done
+
+cat $allgroup1 $allgroup1 > $allgroups
+
+echo "Text Analysis" >$results
+echo "Date Ran: " $now >>$results
+echo "" >>$results
+echo "*****************************************************" >>$results
+echo "                       Group 1" >>$results
+echo "*****************************************************" >>$results
+echo "" >>$results
+
+echo "Document count" >>$results
+ls | wc -l >>$results
+echo "" >>$results
+echo "Total word count" >>$results
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n' | sort | wc -l >>$results
+echo "" >>$results
+echo "Unique word count">>$results
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>$results
+echo "" >>$results
+echo "Interesting word count">>$results
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n'|sort |uniq| sort >$group1sorted
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n'|sort |uniq| sort >$group2sorted
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - $words | wc -l >>$results
+echo "" >>$results
+echo "Words unique to Group" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - $group2sorted | wc -l >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - $group2sorted |sort >$tempresults
+awk '{printf("%s", $0 (NR==0 ? "" : ", "))}' $tempresults >>$results
+echo "" >>$results
+echo "" >>$results
+echo "Words density" >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$allgroup1 | tr -cs 'a-z' '\n' | sort | uniq -c|sort -nr >$tempresults
+head -n $density $tempresults >>$results
+echo "" >>$results
+
+cd $group2
+
+echo "" >>$results
+echo "*****************************************************" >>$results
+echo "                       Group 2" >>$results
+echo "*****************************************************" >>$results
+echo "" >>$results
+
+echo "Document count" >>$results
+ls | wc -l >>$results
+echo "" >>$results
+echo "Total word count" >>$results
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n' | sort | wc -l >>$results
+echo "" >>$results
+echo "Unique word count">>$results
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n' | sort | uniq | wc -l >>$results
+echo "" >>$results
+echo "Interesting word count">>$results
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - $words | wc -l >>$results
+echo "" >>$results
+echo "Words unique to group" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -13 - $group2sorted| wc -l >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -13 - $group2sorted  |sort>$tempresults
+awk '{printf("%s", $0 (NR==0 ? "" : ", "))}' $tempresults >>$results
+echo "" >>$results
+echo "" >>$results
+echo "Words density" >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$allgroup2 | tr -cs 'a-z' '\n' | sort | uniq -c|sort -nr >$tempresults
+head -n $density $tempresults >>$results
+echo "" >>$results
+
+
+echo "" >>$results
+echo "*****************************************************" >>$results
+echo "                    Groups 1 and 2" >>$results
+echo "*****************************************************" >>$results
+echo "" >>$results 
+
+echo "" >>$results
+echo "Words used by both groups " >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -12 - $group2sorted | wc -l >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$group1sorted | tr -cs 'a-z' '\n' | sort | uniq | comm -12 - $group2sorted |sort>$tempresults
+awk '{printf("%s", $0 (NR==0 ? "" : ", "))}' $tempresults >>$results
+echo "" >>$results
+echo "" >>$results
+echo "" >>$results
+echo "Words density" >>$results
+echo "" >>$results
+tr 'A-Z' 'a-z' <$allgroups | tr -cs 'a-z' '\n' | sort | uniq -c|sort -nr >$tempresults
+head -n $density $tempresults >>$results
+echo "" >>$results
+
+cd $desktop
+
+rm $allgroup1 
+rm $allgroup2
+rm $allgroups
+rm $group1sorted
+rm $group2sorted
+rm $tempresults
+echo done
+
+################## Footnotes ##################
+
+possible applications - 
+comparing feedback notes from a group of students to a group of teachers
+comparing the feedback from 2 groups of students from different areas
+comparing 2 documents for similarities
+comparing feedback from 2 different social media channels

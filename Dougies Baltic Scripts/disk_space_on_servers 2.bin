@@ -1,0 +1,117 @@
+#!/bin/bash
+
+
+##########################################################################################################
+#       baltic1 drive C
+#
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //baltic1/C$ /server_mounts/baltic1-drive-c
+then
+        exit 2
+fi
+
+df -h /server_mounts/baltic1-drive-c |  grep -v Filesystem 
+
+if ! umount /server_mounts/baltic1-drive-c
+then
+        exit 2
+fi
+
+##########################################################################################################
+#       baltic1 drive D
+#
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //baltic1/D$ /server_mounts/baltic1-drive-d
+then
+        echo 'Error Mounting //baltic1/D$'
+fi
+df -h /server_mounts/baltic1-drive-d | grep -v Filesystem
+
+if ! umount /server_mounts/baltic1-drive-d
+then
+        echo 'Error unmounting /server_mounts/baltic1-drive-d'
+fi
+
+##########################################################################################################
+#       proxy drive C
+#
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //proxy/C$ /server_mounts/proxy-drive-c
+then
+        echo 'Error Mounting //proxy/C$'
+fi
+df -h /server_mounts/proxy-drive-c | grep -v Filesystem
+
+if ! umount /server_mounts/proxy-drive-c
+then
+        echo 'Error unmounting /server_mounts/proxy-drive-c'
+fi
+
+##########################################################################################################
+#       exchange drive C
+#
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //exchange/C$ /server_mounts/exchange-drive-c
+then
+        echo 'Error Mounting //exchange/C$'
+fi
+df -h /server_mounts/exchange-drive-c | grep -v Filesystem
+
+if ! umount /server_mounts/exchange-drive-c
+then
+        echo 'Error unmounting /server_mounts/exchange-drive-c'
+fi
+
+##########################################################################################################
+#       exchange drive D
+#
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //exchange/D$ /server_mounts/exchange-drive-d
+then
+        echo 'Error Mounting //exchange/D$'
+fi
+df -h /server_mounts/exchange-drive-d | grep -v Filesystem
+
+if ! umount /server_mounts/exchange-drive-d
+then
+        echo 'Error unmounting /server_mounts/exchange-drive-d'
+fi
+
+##########################################################################################################
+#       SQL Drive C
+#
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //sql/C$ /server_mounts/sql-drive-c
+then
+        echo 'Error Mounting //sql/C$'
+fi
+df -h /server_mounts/sql-drive-c | grep -v Filesystem
+
+if ! umount /server_mounts/sql-drive-c
+then
+        echo 'Error unmounting /server_mounts/crm-drive-c'
+fi
+
+##########################################################################################################
+#       SQL Drive D
+#
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //sql/D$ /server_mounts/sql-drive-d
+then
+        echo 'Error Mounting //sql/D$'
+fi
+df -h /server_mounts/sql-drive-d | grep -v Filesystem
+
+if ! umount /server_mounts/sql-drive-d
+then
+        echo 'Error unmounting /server_mounts/crm-drive-d'
+fi
+
+##########################################################################################################
+#       SQL Drive E
+#
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //sql/E$ /server_mounts/sql-drive-e
+then
+        echo 'Error Mounting //sql/E$'
+fi
+df -h /server_mounts/sql-drive-e | grep -v Filesystem
+
+if ! umount /server_mounts/sql-drive-e
+then
+        echo 'Error unmounting /server_mounts/crm-drive-e'
+fi
+
+# EOF: disk_space_on_servers

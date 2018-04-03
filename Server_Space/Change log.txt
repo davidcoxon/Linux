@@ -1,0 +1,19 @@
+This is the second project that i have completed using bash.
+
+Development of the script was originally done offline and took around 2hours a day for a week, debugging of the test version of the script for a single server took around a day when it was put into the production environment and it look another couple of hours offline to tidy and refine the script for a single server. It look a further day to define and add the additional servers.
+
+Originally many of the share points, email addresses,log names and thresholds were hardcoded to the script for each server, this was time consuming to change and allowed lots of room for error where values were copied and pasted and not changed, so a new version was developed were these values are declared as local variables at the start of each section.
+
+When the script went into the production environment may of the initial errors were associated with disks already being mounted before the script ran leading to multiple lines being generated for the current disk space, so an until line was added to unmount the disk before running through the operation.
+     
+The smbfs format had to be changed from administrator to administrator@balticmill for windows 2008 servers.
+
+The smbfs format to mount the windows disks does not appear to work with the mac drives, nor are the disk names c,d,e so you need to do a df on each of the mac's to get their drive names/numbers and may need to use hds instead of smbfs
+
+After trying to use nfs and hds file shares on the mac neither worked satisfactorily and we enabled the his module within the linux install so that we could ssh to the mac servers and execute a df remotely. In order to do this a one off copy of the his key had to be made to the relevant macs to allow a trust between the linux box and the mac.
+
+The events server does not support -h so the human readable space has been removed, the newer mac servers like file maker pro does not support the root user so either enable the root account or use the admin@ account.
+
+In addition to the file size, the change in file size is now included in the freespace report.
+
+When a server exceeds its storage threshold a warning email is sent, this now included the data from that server's usage log rather than the free space report.

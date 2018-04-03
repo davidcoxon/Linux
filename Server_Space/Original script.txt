@@ -1,0 +1,205 @@
+#!/bin/bash
+
+# Based on Dougie Nisbet's script disk_SPACE_on_servers
+# Edited by David Coxon to run as a chon job maintaining server space logs
+# for each server, generating a weekly report and sending email
+# notifications of anomalies. 
+
+## Declare variables
+
+LOGFILES="/root/logs/serverSPACE/server"
+WEEKLYLOGS="/root/logs/serverSPACE/week"
+TODAY=$(date +%d%b%y)
+FREESPACE="${WEEKLYLOGS}_${TODAY}"
+
+##       Make directories if don't exist
+
+mkdir -p ${LOGFILES}
+mkdir -p $FREESPACE
+
+
+##       Create log file
+
+echo "The BALTIC servers have the follow free SPACE on $date" > ${FREESPACE}
+
+##       baltic1 drive C
+
+# mount baltic1:c
+
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //baltic1/C$ /server_mounts/baltic1-drive-c
+then
+        exit 2
+fi
+
+# read in previous space from log file
+
+SERVERLOG="${LOGFILE}_Baltic1-Cdrive.txt"
+PREVIOUSLOG=$(tail -1 $SERVERLOG)
+PREVIOUSSPACE=`echo "$PREVIOUSLOG" | awk '{print $1}'`
+SPACE=$(df -h | grep disk| awk '{print $4}')
+SPACEDETAIL=$(df | grep disk| awk '{print $4}')
+SPACECHANGE=$(($SPACEDETAIL - $PREVIOUSSPACE))
+
+echo "$SPACEDETAIL ($SPACE) free on Baltic1 C drive" >> ${FREESPACE}
+echo "$SPACEDETAIL ($SPACE) free >>${SERVERLOG}
+
+# check disk space BALTIC1-C : warning level 107374182400b (100gb)
+
+if [ "$SPACEDETAIL" -le 107374182400 ] 
+   mail -s "Alert: Low Disk Space on BALTIC1 C-drive" ict@balticmill < ${SERVERLOG}
+ else
+   echo "Everything is OK"
+fi
+
+# check change in disk space BALTIC1-C : warning level 10,737,418,240b (10gb)
+
+if [ "$SPACECHANGE" -gt 10737418240 ] 
+   mail -s "Alert: Unusual Disk Usage on BALTIC1 C-drive" ict@balticmill < ${SERVERLOG}
+ else
+   echo "Everything is OK"
+fi
+
+# unmount baltic1:c
+
+if ! umount /server_mounts/baltic1-drive-c
+then
+        exit 2
+fi
+
+##       baltic1 drive D
+
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //baltic1/D$ /server_mounts/baltic1-drive-d
+then
+        echo 'Error Mounting //baltic1/D$'
+fi
+SPACE=$(df -h | grep disk| awk '{print $4}')
+SPACEDETAIL=$(df | grep disk| awk '{print $4}')
+echo "$SPACEDETAIL ($SPACE) free on Baltic1 D drive" >> ${FREESPACE}
+echo "$SPACEDETAIL ($SPACE) free >>${LOGFILE}.Baltic1-ddrive.txt
+
+if ! umount /server_mounts/baltic1-drive-d
+then
+        echo 'Error unmounting /server_mounts/baltic1-drive-d'
+fi
+
+##       exchange drive C
+
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //exchange/C$ /server_mounts/exchange-drive-c
+then
+        echo 'Error Mounting //exchange/C$'
+fi
+SPACE=$(df -h | grep disk| awk '{print $4}')
+SPACEDETAIL=$(df | grep disk| awk '{print $4}')
+echo "$SPACEDETAIL ($SPACE) free on Exchange C drive" >> ${FREESPACE}
+echo "$SPACEDETAIL ($SPACE) free >>${LOGFILE}.Exchange-cdrive.txt
+if ! umount /server_mounts/exchange-drive-c
+then
+        echo 'Error unmounting /server_mounts/exchange-drive-c'
+fi
+
+##       exchange drive D
+
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //exchange/D$ /server_mounts/exchange-drive-d
+then
+        echo 'Error Mounting //exchange/D$'
+fi
+SPACE=$(df -h | grep disk| awk '{print $4}')
+SPACEDETAIL=$(df | grep disk| awk '{print $4}')
+echo "$SPACEDETAIL ($SPACE) free on Exchange D drive" >> ${FREESPACE}
+echo "$SPACEDETAIL ($SPACE) free >>${LOGFILE}.Exchange-ddrive.txt
+
+if ! umount /server_mounts/exchange-drive-d
+then
+        echo 'Error unmounting /server_mounts/exchange-drive-d'
+fi
+
+
+##      proxy drive C
+
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //proxy/C$ /server_mounts/proxy-drive-c
+then
+        echo 'Error Mounting //proxy/C$'
+fi
+SPACE=$(df -h | grep disk| awk '{print $4}')
+SPACEDETAIL=$(df | grep disk| awk '{print $4}')
+echo "$SPACEDETAIL ($SPACE) free on Proxy C drive" >> ${FREESPACE}
+echo "$SPACEDETAIL ($SPACE) free >>${LOGFILE}.Proxy-cdrive.txt
+
+if ! umount /server_mounts/proxy-drive-c
+then
+        echo 'Error unmounting /server_mounts/proxy-drive-c'
+fi
+
+##       SQL Drive C
+
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //sql/C$ /server_mounts/sql-drive-c
+then
+        echo 'Error Mounting //sql/C$'
+fi
+SPACE=$(df -h | grep disk| awk '{print $4}')
+SPACEDETAIL=$(df | grep disk| awk '{print $4}')
+echo "$SPACEDETAIL ($SPACE) free on SQL C drive" >> ${FREESPACE}
+echo "$SPACEDETAIL ($SPACE) free >>${LOGFILE}.Sql-cdrive.txt
+
+if ! umount /server_mounts/sql-drive-c
+then
+        echo 'Error unmounting /server_mounts/crm-drive-c'
+fi
+
+##       SQL Drive D
+
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //sql/D$ /server_mounts/sql-drive-d
+then
+        echo 'Error Mounting //sql/D$'
+fi
+SPACE=$(df -h | grep disk| awk '{print $4}')
+SPACEDETAIL=$(df | grep disk| awk '{print $4}')
+echo "$SPACEDETAIL ($SPACE) free on Sql D drive" >> ${FREESPACE}
+echo "$SPACEDETAIL ($SPACE) free >>${LOGFILE}.Sql-ddrive.txt
+
+if ! umount /server_mounts/sql-drive-d
+then
+        echo 'Error unmounting /server_mounts/crm-drive-d'
+fi
+
+##       SQL Drive E
+
+if ! mount -t smbfs -o read-only -o username=administrator,password=f10urm111 //sql/E$ /server_mounts/sql-drive-e
+then
+        echo 'Error Mounting //sql/E$'
+fi
+SPACE=$(df -h | grep disk| awk '{print $4}')
+SPACEDETAIL=$(df | grep disk| awk '{print $4}')
+echo "$SPACEDETAIL ($SPACE) free on Sql E drive" >> ${FREESPACE}
+echo "$SPACEDETAIL ($SPACE) free >>${LOGFILE}.Sql-edrive.txt
+
+if ! umount /server_mounts/sql-drive-e
+then
+        echo 'Error unmounting /server_mounts/crm-drive-e'
+fi
+
+##       Sage
+##       CRM
+##       HR Database
+##       Kelio
+##       People Counter
+##       Luxmate
+##       BMS
+##       Door Access
+##       Hanwell
+##       People Counter
+##       Events
+##       Archive
+##       Retrospect
+##       Programme Database
+
+
+##       write end of file
+echo "Individual log files can be found at ${LOGFILES}" >> ${FREESPACE}
+
+
+##       Mail results
+
+mail -s "Free SPACE on servers" ict@balticmill < ${FREESPACE}
+
+# EOF: Server_Space

@@ -1,0 +1,184 @@
+#!/bin/bash
+
+# Script:       pinghosts
+# Notes:        Periodically pings a list of hosts to check
+#               network connectivity. List to check is in:
+#                       /root/etc/hostlist
+#               hosts listed in /root/etc/hostlist must also have an
+#               entry in the system hosts file
+#                       /etc/hosts
+#
+# ====================== CHANGE LOG ===========================
+# 7 Dec 12:     Added extra code at beginning of script to check if
+# DN            3AB switch is pingable. If not, suspend checks.
+#               Also added command line options resume and suspend.
+# 12 Dec 12:    Removed parallel background pinging.
+# DN            Now pings hosts sequentally.
+#               Removed 60 second sleep.
+
+HOSTLIST=/root/etc/hostlist
+LOGFILE="/root/logs/pinglog.out"
+
+# we will check the main gateway before checking everything else
+switch="core_switch_192_168_1_254"
+
+# check command line args
+# this could perhaps be more elegantly handled using getops.
+# perhaps investigate in longer term if cmd args get more complex
+if [[ $1 = "suspend" ]] ; then
+        if [[ -r /root/run/.pinghosts-suspended ]] ; then
+                echo "pinghosts activity had already been suspended"
+                ls -l /root/run/.pinghosts-suspended
+        else
+                touch /root/run/.pinghosts-suspended
+                echo "Suspending pinghosts network checks."
+                echo "To resume checks, run the command:"
+                echo "  /root/bin/pinghosts resume"
+                echo 'To resume run: /root/bin/pinghosts resume' | mail -s "SUSPENDING pinghosts" ict@balticmill.com
+        fi
+        exit 2
+elif [[ $1 = "resume" ]] ; then
+        if [[ -r /root/run/.pinghosts-suspended ]] ; then
+                echo "Resuming pinghosts network checks"
+                rm /root/run/.pinghosts-suspended
+                date | mail -s "RESUMING pinghosts" ict@balticmill.com
+        else
+                echo "pinghosts had not been suspended"
+        fi
+        exit 2
+fi
+
+# MAIN LOOP
+while :
+do
+# Check if currently suspended
+# Wait until we can go
+        while [[ -r /root/run/.pinghosts-suspended ]] ; do
+                touch /root/run/.pinghosts-suspended-lastchecked
+                sleep 60
+        done
+
+# Check if we can see the main gateway
+# If we can't - we may as well wait until we can
+        hname=$switch
+        while ! ping -q -c2 ${hname} > /dev/null 2>&1 ; do
+                if [[ ! -f /root/run/.${hname} ]] ; then
+                        echo "$(date) - ${hname} - contact lost" >> ${LOGFILE}
+                        echo -e "$(date) - contact lost with $hname - suspending network tests\n" > /root/run/.${hname}
+                        cat /root/run/.${hname} >> /root/logs/${hname}
+
+                        # belt and braces
+                        ssh dougie@dougie_home "mail -s '('$(hostname)') '$hname' SWITCH CONNECTIVITY LOST' dougie@highmoor.co.uk" < /root/logs/${hname}
+                fi
+        done
+
+# we know main gateway is online - check whether it's not been away
+        if [[ -f /root/run/.${hname} ]] ; then
+                workfile=/root/tmp/workfile.${hname}
+                echo "$(date) - ${hname} - contact restored" >> ${LOGFILE}
+                echo -e "$(date) - contact restored\n" > /root/run/.${hname}
+                cat /root/run/.${hname} >> /root/logs/${hname}
+
+# use sed instead of tac for portability
+                sed -n '1!G;h;$p' < /root/logs/${hname} | head -50 > $workfile
+                echo -e "\nComplete connectivity log for this host is in: /root/logs/${hname}" >> $workfile
+       
+                mail -s "$hname connectivity RESTORED" ict@balticmill.com < $work file
+# belt and braces
+                ssh dougie@dougie_home "mail -s '('$(hostname)') '$hname' connectivity RESTORED' dougie@highmoor.co.uk" < $workfile
+                rm /root/run/.${hname}
+#
+#       Sleep for a couple of minutes to allow the network to settle.
+#       Then run pinghosts1shot for a network summary
+#
+                sleep 120
+                /root/bin/pinghosts1shot
+
+        fi
+
+# Main Loop for parsing hostlist
+        cat ${HOSTLIST} | grep -v "^$" | grep -v "^#" | while read hname
+        do
+                if ping -q -c2 $hname > /dev/null 2>&1
+                then
+#
+#       host has been detected. Now we check for lockfile.
+#       if that exists we know that on the last check the host was down
+#
+                        if [[ -f /root/run/.${hname} ]] ; then
+
+                                # create a temporary unique file to use to compose email message
+                                workfile=/root/tmp/workfile.${hname}
+
+                                echo "$(date) - ${hname} - contact restored" >> ${LOGFILE}
+                                echo -e "$(date) - contact restored\n" > /root/run/.${hname}
+       
+                                cat /root/run/.${hname} >> /root/logs/${hname}
+
+# use sed instead of tac for portability
+                                sed -n '1!G;h;$p' < /root/logs/${hname} | head -50 > $workfile
+                                echo -e "\nComplete connectivity log for this host is in: /root/logs/${hname}" >> $workfile
+       
+                                mail -s "$hname connectivity RESTORED" ict@balticmill.com < $workfile
+
+                                # belt and braces
+                                ssh dougie@dougie_home "mail -s '('$(hostname)') '$hname' connectivity RESTORED' dougie@highmoor.co.uk" < $workfile
+                               
+
+  
+                                rm /root/run/.${hname}
+                                rm $workfile
+                        fi     
+                else
+#
+#       cannot ping host
+#       check if we already know this. we only want to email once.
+#
+                        if [[ ! -f /root/run/.${hname} ]] ; then
+#
+#       Give the host another chance. Sleep for 10 seconds
+#       then check again - and if ok note it is a transient loss
+#
+                                sleep 10
+
+                                if ping -q -c2 $hname > /dev/null 2>&1
+                                then
+                                        workfile=/root/tmp/workfile.${hname}
+       
+                                        echo "$(date) - ${hname} - connectivity lost temporarily" >> ${LOGFILE}
+                                        echo -e "$(date) - conectivity lost temporarily\n" > /root/run/.${hname}
+
+                                        cat /root/run/.${hname} >> /root/logs/${hname}
+                                        tac /root/logs/${hname} | head -50 > $workfile
+                                        echo -e "\nComplete connectivity log for this host is in: /root/logs/${hname}" >> $workfile
+                                        mail -s "$hname connectivity lost temporarily" ict@balticmill.com < $workfile
+                                        # belt and braces
+                                        ssh dougie@dougie_home "mail -s '('$(hostname)') '$hname' connectivity lost temporarily' dougie@highmoor.co.uk" < $workfile
+                                        rm /root/run/.${hname}
+                                        rm $workfile
+                                       
+                                else
+#
+#       cannot ping host on two attempts
+#
+                                        workfile=/root/tmp/workfile.${hname}
+       
+                                        echo "$(date) - ${hname} - contact lost" >> ${LOGFILE}
+                                        echo -e "$(date) - contact lost\n" > /root/run/.${hname}
+
+                                        cat /root/run/.${hname} >> /root/logs/${hname}
+                                        tac /root/logs/${hname} | head -50 > $workfile
+                                        echo -e "\nComplete connectivity log for this host is in: /root/logs/${hname}" >> $workfile
+                                        mail -s "$hname connectivity LOST" ict@balticmill.com < $workfile
+                                        # belt and braces
+                                        ssh dougie@dougie_home "mail -s '('$(hostname)') '$hname' connectivity LOST' dougie@highmoor.co.uk" < $workfile
+                                        rm $workfile
+                                fi
+                        fi
+                fi
+
+        done
+       
+done
+       
+# EOF: pinghosts

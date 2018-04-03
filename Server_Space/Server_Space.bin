@@ -1,0 +1,120 @@
+# !/bin/bash
+
+# Based on Dougie Nisbet's script disk_SPACE_on_servers
+# Edited by David Coxon to run as a chon job maintaining server space logs
+# for each server, generating a weekly report and sending email
+# notifications of anomalies.
+
+# Single server test version with details declared as variables
+
+## Declare Global Variables
+
+LOGFILES="${HOME}/logs/serverspace/server/"
+WEEKLYLOGS="${HOME}/logs/serverspace/week/"
+TODAY=$(date +%d%b%y)
+FREESPACE="${WEEKLYLOGS}${TODAY}"
+ALERTEMAIL="ict@balticmill.com"
+
+##       Make directories if don't exist
+
+mkdir -p ${LOGFILES}
+mkdir -p ${WEEKLYLOGS}
+
+
+##       Create log file
+
+echo "The BALTIC servers have the followng free space on ${TODAY}" > ${FREESPACE}
+
+## 
+##       baltic1 drive C
+##     
+
+# declare local variables
+
+SMBNAME="baltic1/C"
+FSNAME="baltic1-drive-c"
+FSDIRECTORY="/server_mounts/${FSNAME}"
+SERVERLOG="${LOGFILES}${FSNAME}.txt"
+PREVIOUSLOG=$(tail -1 $SERVERLOG)
+PREVIOUSSPACE=`echo "$PREVIOUSLOG" | awk '{print $1}'`
+SIZELIMIT="25477877"
+CHANGELIMIT="5477877"
+
+# check disk not already mounted
+
+df ${FSNAME}
+until ! df | grep -q ${FSNAME}
+do
+        echo "WARNING - ${FSNAME} MOUNTED">>${FREESPACE}
+        umount ${FSDIRECTORY}
+done
+
+# mount disk
+if ! mount -t smbfs --read-only -o username=administrator,password=f10urm111 //${SMBNAME}$ ${FSDIRECTORY}
+then
+        exit 2
+fi
+
+# get space
+
+SPACE=$(df -h | grep "${SMBNAME}"| awk '{print $4}')
+SPACEDETAIL=$(df | grep "${SMBNAME}"| awk '{print $4}')
+
+SPACECHANGE=$((${SPACEDETAIL} - ${PREVIOUSSPACE}))
+
+echo "${SPACEDETAIL} ($SPACE) free on ${FSNAME}" >> ${FREESPACE}
+echo "${SPACEDETAIL} ($SPACE) free on ${TODAY}" >>${SERVERLOG}
+
+if [ "${SPACEDETAIL}" -le ${SIZELIMIT} ]
+then
+   mail -s "Alert: Low Disk Space on ${FSNAME}" ${ALERTEMAIL} < ${SERVERLOG}
+ else
+   echo "Space OK"
+fi
+
+# check change in disk space
+
+if [ "$SPACECHANGE" -gt ${CHANGELIMIT} ]
+then 
+ mail -s "Alert: Unusual Disk Usage on ${FSNAME}" ${ALERTEMAIL} < ${SERVERLOG}
+ else
+   echo "No unusual usage"
+fi
+
+# unmount disk
+
+if ! umount /${FSDIRECTORY}
+then
+        exit 2
+fi
+
+
+##       Servers to add
+      
+##       Exchange
+##       Proxy
+##       SQL
+##       CRM
+##       Sage
+##       HR Database
+##       Kelio
+##       People Counter
+##       Luxmate
+##       BMS
+##       Door Access
+##       Hanwell
+##       Events
+##       Archive
+##       Retrospect
+##       Programme Database
+
+
+##       write end of file
+echo "Individual log files for each server can be found at ${LOGFILES}" >> ${FREESPACE}
+
+
+##       Mail results
+
+mail -s "Free space on servers" ict@balticmill.com < ${FREESPACE}
+
+# EOF: Server_Space

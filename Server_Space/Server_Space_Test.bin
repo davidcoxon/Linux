@@ -1,0 +1,121 @@
+# !/bin/bash
+
+# Based on Dougie Nisbet's script disk_SPACE_on_servers
+# Edited by David Coxon to run as a chon job maintaining server space logs
+# for each server, generating a weekly report and sending email
+# notifications of anomalies.
+
+# Single server test version - works in production environment
+
+## Declare variables
+
+LOGFILES="${HOME}/logs/serverspace/server/"
+WEEKLYLOGS="${HOME}/logs/serverspace/week/"
+TODAY=$(date +%d%b%y)
+FREESPACE="${WEEKLYLOGS}${TODAY}"
+
+##       Make directories if don't exist
+
+mkdir -p ${LOGFILES}
+mkdir -p ${WEEKLYLOGS}
+
+
+##       Create log file
+
+echo "The BALTIC servers have the followng free space on ${TODAY}" > ${FREESPACE}
+
+##       baltic1 drive C
+
+fsname="/server_mounts/baltic1-drive-c"
+
+# Check not already mounted
+
+echo "DBG: df $fsname"
+df $fsname
+until ! df | grep -q $fsname
+do
+        echo "WARNING - UNMOUNTING $fsname"
+        echo "WARNING - UNMOUNTING $fsname">>${FREESPACE}
+        umount $fsname
+done
+
+# mount baltic1:c
+
+if ! mount -t smbfs --read-only -o username=administrator,password=f10urm111 //baltic1/C$ /server_mounts/baltic1-drive-c
+then
+        exit 2
+fi
+
+
+# read in previous space from log file
+
+SERVERLOG="${LOGFILES}Baltic1-Cdrive.txt"
+PREVIOUSLOG=$(tail -1 $SERVERLOG)
+PREVIOUSSPACE=`echo "$PREVIOUSLOG" | awk '{print $1}'`
+# echo "PREVIOUSSPACE: $PREVIOUSSPACE"
+
+SPACE=$(df -h | grep "baltic1/C"| awk '{print $4}')
+SPACEDETAIL=$(df | grep "baltic1/C"| awk '{print $4}')
+echo "SPACEDETAIL: $SPACEDETAIL"
+echo "PREVIOUSSPACE: $PREVIOUSSPACE"
+SPACECHANGE=$((${SPACEDETAIL} - ${PREVIOUSSPACE}))
+
+# echo "SPACE: $SPACE"
+# echo "SPACEDETAIL: $SPACEDETAIL"
+
+echo "${SPACEDETAIL} ($SPACE) free on Baltic1 C drive" >> ${FREESPACE}
+echo "${SPACEDETAIL} ($SPACE) free on ${TODAY}" >>${SERVERLOG}
+
+if [ "${SPACEDETAIL}" -le 25477877 ]
+then
+   mail -s "Alert: Low Disk Space on BALTIC1 C-drive" ict@balticmill.com < ${SERVERLOG}
+ else
+   echo "Everything is OK"
+fi
+
+# check change in disk space BALTIC1-C : warning level 10477877 (10gb)
+
+if [ "$SPACECHANGE" -gt 10477877 ]
+then 
+ mail -s "Alert: Unusual Disk Usage on BALTIC1 C-drive" ict@balticmill.com < ${SERVERLOG}
+ else
+   echo "Everything is OK"
+fi
+
+# unmount baltic1:c
+
+if ! umount /server_mounts/baltic1-drive-c
+then
+        exit 2
+fi
+
+##       Servers to add
+##      
+##       Exchange
+##       Proxy
+##       SQL
+##       Sage
+##       CRM
+##       HR Database
+##       Kelio
+##       People Counter
+##       Luxmate
+##       BMS
+##       Door Access
+##       Hanwell
+##       People Counter
+##       Events
+##       Archive
+##       Retrospect
+##       Programme Database
+
+
+##       write end of file
+echo "Individual log files can be found at ${LOGFILES}" >> ${FREESPACE}
+
+
+##       Mail results
+
+mail -s "Free space on servers" ict@balticmill.com < ${FREESPACE}
+
+# EOF: Server_Space

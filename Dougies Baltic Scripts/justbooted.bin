@@ -1,0 +1,38 @@
+
+#!/bin/bash
+#justbooted
+
+uptime | mail -s "linux1 has just booted" ict@balticmill.com
+
+#       Do a single pass pinging all the hosts of interest
+
+HOSTLIST=/root/etc/hostlist
+LOGFILE="/root/logs/pinglog1shot.out"
+UPLIST="/root/logs/uplist.out"
+DOWNLIST="/root/logs/downlist.out"
+
+rm -f $LOGFILE $UPLIST $DOWNLIST
+date >> $LOGFILE
+
+cat ${HOSTLIST} | grep -v "^$" | grep -v "^#" | while read hname
+do
+        if ping -q -c2 $hname > /dev/null 2>&1
+        then
+                echo "${hname} is UP" | tee -a $UPLIST
+        else            echo "${hname} is DOWN" | tee -a $DOWNLIST
+        fi
+done
+
+echo -e "---------------------------" >> $LOGFILE
+cat $DOWNLIST >> $LOGFILE
+echo -e "---------------------------" >> $LOGFILE
+cat $UPLIST >> $LOGFILE
+echo -e "---------------------------" >> $LOGFILE
+date >> $LOGFILE
+
+mail -s "ping test of key hosts" ict@balticmill.com < $LOGFILE
+
+# belt and braces
+ssh dougie@dougie_home "mail -s '('$(hostname)') '$hname' ping test of key hosts' dougie@highmoor.co.uk" < $LOGFILE
+
+# EOF: justbooted
